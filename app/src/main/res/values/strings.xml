@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">World Cup Spirit</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="main_fragment_label">Main Fragment</string>
+    <string name="info_fragment_label">Info Fragment</string>
+    <string name="info_match_fragment_label">InfoMatch Fragment</string>
+
+</resources>
