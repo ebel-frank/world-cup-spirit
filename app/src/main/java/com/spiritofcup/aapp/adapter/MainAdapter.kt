@@ -1,5 +1,6 @@
 package com.spiritofcup.aapp.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -27,15 +28,19 @@ class MainAdapter(private val items: List<Any>) : RecyclerView.Adapter<RecyclerV
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        Log.d("MainFragment", "pos: $position")
         when (holder) {
             is TitleViewHolder -> {
                 holder.bind(items[position] as String)
+                Log.d("MainFragment", "Title: ${items[position]}")
             }
             is HeaderViewHolder -> {
                 holder.bind(items[position] as String)
+                Log.d("MainFragment", "Header: ${items[position]}")
             }
             is ContentViewHolder -> {
                 holder.bind(items[position] as StageMatches)
+                Log.d("MainFragment", "Match: ${(items[position] as StageMatches).firstTeamName}")
             }
         }
     }
@@ -96,6 +101,11 @@ class MainAdapter(private val items: List<Any>) : RecyclerView.Adapter<RecyclerV
             secondTeamName.setOnClickListener {
                 val action = MainFragmentDirections.actionMainFragmentToInfoFragment()
                 action.teamId = (items[adapterPosition] as StageMatches).secondTeamId
+                itemView.findNavController().navigate(action)
+            }
+            itemView.setOnClickListener {
+                val action = MainFragmentDirections.actionMainFragmentToInfoMatchFragment()
+                action.matchId = adapterPosition
                 itemView.findNavController().navigate(action)
             }
 

@@ -31,5 +31,10 @@
         android:id="@+id/InfoMatchFragment"
         android:name="com.spiritofcup.aapp.fragment.InfoMatchFragment"
         android:label="@string/info_match_fragment_label"
-        tools:layout="@layout/fragment_info_match"/>
+        tools:layout="@layout/fragment_info_match">
+        <argument
+            android:name="matchId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>

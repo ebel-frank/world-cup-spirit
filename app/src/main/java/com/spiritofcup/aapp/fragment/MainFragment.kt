@@ -28,9 +28,6 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-       /* binding.recyclerView.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }*/
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.recyclerView.adapter = MainAdapter(DataManager.getStageMatches)
     }

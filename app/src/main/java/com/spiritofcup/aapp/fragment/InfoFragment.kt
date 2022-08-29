@@ -1,5 +1,6 @@
 package com.spiritofcup.aapp.fragment
 
+import android.graphics.ColorFilter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.spiritofcup.aapp.DataManager
+import com.spiritofcup.aapp.R
 import com.spiritofcup.aapp.databinding.FragmentInfoBinding
 
 class InfoFragment : Fragment() {

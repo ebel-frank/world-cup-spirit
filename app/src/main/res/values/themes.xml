@@ -12,11 +12,16 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
     </style>
 
     <style name="Theme.WorldCupSpirit.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ActionBarTheme" parent="ThemeOverlay.AppCompat.ActionBar" >
+        <item name="colorControlNormal">@color/white</item>
     </style>
 
     <style name="Theme.WorldCupSpirit.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
